@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
+
+$font-family-main: "Playfair Display", serif;
+$font-size-main: 36px;
+$font-size-title: 24px;
+$color-main: #000;
+$color-sub: #aaa;
+$color: #eee;
+$font-family-sub: "Noto Sans TC";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans TC";
+}
+
+body {
+    background-color: #eee;
+    height: 1000px;
+    background-image: url(./img/body.jpg);
+    backdrop-filter: blur(3px) brightness(90%);
+    background-size: 100%;
+}
+
+#title {
+    text-align: center;
+    line-height: 1.5;
+    color: #fff;
+
+    h1 {
+        font-family: 微軟正黑體;
+        font-size: 48px;
+        font-weight: 600;
+        letter-spacing: 5px;
+        padding: 30px;
+    }
+    p {
+        padding: 0px;
+    }
+}
+
+#news {
+    width: 1500px;
+    margin: 0 auto;
+    height: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+    padding: 70px 0;
+    text-align: center;
+    transition: 0.3s;
+   
+
+    h2 {
+        margin-top: 100px;
+        padding-right: 10px;
+    }
+    p {
+        padding: 30px;
+        line-height: 1.5;
+    }
+    h1 {
+        font-size: $font-size-main;
+        padding: 20px;
+    }
+    h5 {
+        padding: 10px;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .news-box {
+        background: none;
+        border: 1px solid #000;
+        height: 600px;
+        border: 1.5px solid none;
+        width: 500px;
+        margin: -20px auto;
+        position: relative;
+        .play{
+        transition: 0.5s;
+        }
+        img{
+           width: 450px;
+           margin-top: -210px;
+           opacity: 0;
+           transition: 0.5s;
+        }
+
+        &:hover{
+           >.play{
+               transition: 0.5s;
+               transform: translateY(-100px);
+               opacity:0;
+            } 
+           >.playimg{
+               transition: 0.8s;
+              transform: translateY(-100px); 
+              opacity:1;
+           } 
+        }
+       
+
+        
+    }
+    hr {
+        border: 1px solid $color;
+        width: 50px;
+        margin: 0px auto;
+        margin-top: -5px;
+        height: 1px;
+        background:$color;
+    }
+
+    a {
+        display: block;
+        border: 1px solid #eee;
+        border-radius: 20px;
+        margin: 20px auto;
+        text-decoration: none;
+        color: $color-main;
+        transition: 0.5s;
+        background: #eee;
+        width: 150px;
+        padding: 10px 20px;
+
+        &:hover {
+            color: $color-sub;
+        }
+    }
+}
+
+.month {
+    margin: -50px auto;
+    border: 1px solid #eee;
+    height: 100px;
+    width: 120px;
+    background: #eee;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    color: #024679;
+    h3 {
+        font-family: $font-family-sub;
+        font-size: $font-size-title;
+    }
+    p {
+        padding: 10px;
+    }
+}

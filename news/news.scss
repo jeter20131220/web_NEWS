@@ -1,0 +1,106 @@
+// 2020-09-18 by Fifisshh
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC";
+}
+
+// Navbar Start
+#navbar {
+  position: fixed;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+  width: 100vw;
+  height: 70px;
+  padding: 5px 5vw;
+  z-index: 1;
+  transition: 0.4s ease-out;
+  background: #000;
+
+  .link {
+    float: left;
+    padding-top: 25px;
+  }
+  .link ul {
+    display: flex;
+    list-style: none;
+    li {
+      // border: 1px solid #000;
+      // width: 100px;
+      // height: 30px;
+      overflow: hidden;
+      .en,
+      .ch {
+        position: relative;
+        transition: opacity 0.3s;
+      }
+      .en {
+        display: flex;
+        justify-content: center;
+        letter-spacing: 5px;
+      }
+      .ch {
+        position: absolute;
+        top: 27px;
+        // visibility: hidden;
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        letter-spacing: 3px;
+      }
+      a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 0 10px;
+        color: snow;
+        &:hover .en {
+          // visibility: hidden;
+          opacity: 0;
+        }
+        &:hover .ch {
+          // visibility: visible;
+          opacity: 1;
+          z-index: 99;
+          // margin-top: -1px;
+        }
+      }
+    }
+  }
+
+  .brand a {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    background-image: url(../img/LTlogo2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+  }
+
+  .order {
+    float: right;
+    padding-top: 25px;
+    a {
+      padding: 0 10px;
+      img {
+        width: 20px;
+        height: 20px;
+        filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(342deg) brightness(104%) contrast(102%);
+      }
+    }
+  }
+
+  &.scrolled {
+    height: 70px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+}
